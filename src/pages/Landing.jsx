@@ -150,15 +150,16 @@ export default function Landing() {
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.3, duration: 0.6 }}
             className="flex flex-col sm:flex-row gap-4">
-            <a href="/group"
+            <Link to="/group"
             className="inline-flex items-center gap-3 bg-primary-foreground text-foreground px-7 py-3.5 text-[11px] tracking-[0.18em] uppercase font-body hover:bg-copper hover:text-primary-foreground transition-all duration-300">
               Explore the Group
               <ArrowRight className="w-3.5 h-3.5" />
-            </a>
-            <a href="/group#contact"
+            </Link>
+            <button
+            onClick={() => { window.location.href = '/group#contact'; }}
             className="inline-flex items-center gap-3 border border-primary-foreground/25 text-primary-foreground/80 px-7 py-3.5 text-[11px] tracking-[0.18em] uppercase font-body hover:border-copper hover:text-copper transition-all duration-300">
               Get in Touch
-            </a>
+            </button>
           </motion.div>
 
           {/* Scroll indicator */}
